@@ -2,7 +2,10 @@ TEMPLATE = lib
 
 TARGET = CtrlRegex
 
-CONFIG += qt dll plugin release
+CONFIG += qt dll release
+# no symlinks
+CONFIG += plugin
+# no lib* prefix
 CONFIG += no_plugin_name_prefix
 
 INCLUDEPATH += .
