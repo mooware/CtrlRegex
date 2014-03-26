@@ -102,7 +102,7 @@ void RegexExternHdl::reDynMatch(ExecuteParamRec &param, DynVar &result) const
     if (!item)
       item = new TextVar();
 
-    *item = *(input.getAt(i));
+    *item = *(input[i]);
     QString qitem = QString::fromUtf8(item->getValue());
 
     if (regex.exactMatch(qitem))
