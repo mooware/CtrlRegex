@@ -21,6 +21,8 @@ dyn_string reDynMatch(dyn_string input, string pattern, bool caseSensitive = tru
 // - RE_WILDCARD_UNIX: globbing with unix flavor
 ```
 
+The [sample.ctl](sample.ctl) script contains a few examples.
+
 Since this is just a simple wrapper around QRegExp from QtCore, the QRegExp documentation should answer most of your questions.
 
 License
