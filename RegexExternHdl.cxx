@@ -128,7 +128,7 @@ bool RegexExternHdl::parseParams(ExecuteParamRec &param, unsigned int startIdx, 
 
   // skip the leading params
   param.args->getFirst();
-  for (unsigned int i = 0; i < startIdx; ++i)
+  for (unsigned int i = 0; i < startIdx - 1; ++i)
     param.args->getNext();
 
   TextVar pattern;
