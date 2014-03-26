@@ -1,16 +1,11 @@
 include $(API_ROOT)/CtrlExt.mk
 
-OFILES = Regex2ExternHdl.o
+INCLUDE += -I/usr/include/qt4 -I/usr/include/qt4/QtCore
+OTHER_CXXFLAGS += -DQT_NAMESPACE=WinCC_OA
+OFILES = RegexExternHdl.o
 
-CtrlRegex2: $(OFILES)
-	@rm -f addVerInfo.o
-	@$(MAKE) addVerInfo.o
-	$(SHLIB) -o CtrlRegex2.so addVerInfo.o $(OFILES) $(LIBS)
+CtrlRegex: $(OFILES)
+	$(SHLIB) -o CtrlRegex.so $(OFILES) $(LIBS)
 
 clean:
-	@rm -f *.o CtrlRegex2.so
-
-addVerInfo.cxx: $(API_ROOT)/addVerInfo.cxx
-	@cp -f $(API_ROOT)/addVerInfo.cxx addVerInfo.cxx
-
-addVerInfo.o: $(OFILES) addVerInfo.cxx
+	@rm -f *.o CtrlRegex.so
