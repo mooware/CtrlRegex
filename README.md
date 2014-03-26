@@ -30,7 +30,7 @@ Build
 
 I got the build working on Linux with the non-qmake Makefile currently checked in. Other platforms should also work without issue.
 
-A somewhat hackish aspect is that the WinCC OA API kit does not actually include headers for Qt, but the setup includes and uses a ```QtCore.so```. The current Makefile uses the same QT_NAMESPACE as WinCC OA, so that it works with the included shared library.
+A somewhat hackish aspect is that the WinCC OA API kit does not actually include headers for Qt, but the setup includes and uses a ```QtCore.so```. The current Makefile uses the same ```QT_NAMESPACE``` as WinCC OA, so that it works with the included shared library.
 
 License
 =======
