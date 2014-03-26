@@ -15,8 +15,8 @@ FunctionListRec fnList[] =
 {
   //  Return-Value    function name        parameter list               true == thread-safe
   //  -------------------------------------------------------------------------------------
-    { BIT_VAR, "reMatch",    "(string pattern, string input)" , true},
-    { DYN_VAR, "reDynMatch", "(string pattern, dyn_string input)", true}
+    { BIT_VAR, "reMatch",    "(string input, string pattern, bool caseSensitive = true, int syntaxType = RE_REGEX)" , true},
+    { DYN_VAR, "reDynMatch", "(dyn_string input, string pattern, bool caseSensitive = true, int syntaxType = RE_REGEX)", true}
   };
 
 CTRL_EXTENSION(RegexExternHdl, fnList)
